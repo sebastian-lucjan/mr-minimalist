@@ -1,8 +1,8 @@
 .app {
   text-align: center;
-  /* background-color: #282c34; */
-  min-height: 100vh;
   color: #fbfbfb;
+  min-height: 100vh;
+
   background-color: #121212;
   font-weight: 300;
 }
