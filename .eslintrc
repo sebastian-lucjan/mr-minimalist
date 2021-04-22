@@ -1,0 +1,29 @@
+{
+  //zbiór zasad jakimi ma się kierować eslint jak będzie badać nasz kod
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "plugins": [
+    "prettier"
+  ],
+  //określenie środowkis w jakich będzimy się poruszać w aplikacji
+  //zmienne globalne
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  //mechanim mogący przechodzić przez nasz kod i sprawdzający
+  "parser": "babel-eslint"
+}
