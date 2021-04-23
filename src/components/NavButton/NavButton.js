@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-const NavButton = (props) => {
-  return <button>contact</button>;
+const NavButton = ({ title }) => {
+  return <button>{title}</button>;
 };
 
 NavButton.propTypes = {};

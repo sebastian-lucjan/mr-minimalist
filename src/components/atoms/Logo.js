@@ -1,10 +1,14 @@
 import React from 'react';
-// import
+import PropTypes from 'prop-types';
 
-export const Logo = () => {
+export const Logo = ({ logoText }) => {
   return (
     <>
-      <h1>minimalist</h1>
+      <h1>{logoText}</h1>
     </>
   );
+};
+
+Logo.propTypes = {
+  logoText: PropTypes.string,
 };
