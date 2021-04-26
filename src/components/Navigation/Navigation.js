@@ -1,13 +1,19 @@
 import PropTypes from 'prop-types';
-import NavButton from 'components/NavButton/NavButton';
+import Button from 'components/NavButton/NavButton';
 import React from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.nav`
+  display: flex;
+  margin-right: 20px;
+`;
 
 const Navigation = ({ navigationButtons }) => {
   const navButtons = navigationButtons.map((navButon, index) => (
-    <NavButton key={index} title={navButon} />
+    <Button key={index} title={navButon} />
   ));
 
-  return <nav>{navButtons}</nav>;
+  return <Wrapper>{navButtons}</Wrapper>;
 };
 
 Navigation.propTypes = { navigationButtons: PropTypes.array.isRequired };

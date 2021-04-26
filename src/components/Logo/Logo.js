@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyledLogo } from './Logo.styles';
 
 export const Logo = ({ logoText }) => {
   return (
     <>
-      <h1>{logoText}</h1>
+      <StyledLogo>{logoText}</StyledLogo>
     </>
   );
 };
