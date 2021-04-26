@@ -5,6 +5,7 @@
     "react-app/jest",
     "prettier"
   ],
+  //łączenie eslinta i prettiera
   "rules": {
     "prettier/prettier": [
       "error",
