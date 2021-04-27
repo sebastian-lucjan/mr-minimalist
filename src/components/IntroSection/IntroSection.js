@@ -1,8 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import { IntroArticle } from 'components/IntroArticle/IntroArticle';
 
 const StyledIntroSection = styled.section`
-  color: greenyellow;
+  margin: 80px 20px 0px;
+  display: grid;
+  row-gap: 40px;
+  max-width: 1280px;
+
+  & :nth-child(even) {
+    justify-self: center;
+  }
+  & :nth-child(1) {
+    justify-self: center;
+  }
+  & :nth-child(2) {
+    justify-self: right;
+  }
 `;
 
 export const IntroSection = ({ introTextsObj }) => {
@@ -12,14 +26,21 @@ export const IntroSection = ({ introTextsObj }) => {
     textUnderIntro,
     purposeIntroText,
     purposeText,
-    minimalismRules,
+    minimalismRulesOne,
+    minimalismRulesTwo,
     importantThings,
   } = introTextsObj;
 
   console.log(intro);
   return (
     <StyledIntroSection>
-      <div>{intro}</div>
+      <IntroArticle text={intro} xlSize />
+      <IntroArticle text={textUnderIntro} />
+      <IntroArticle text={purposeIntroText} xlSize />
+      <IntroArticle text={purposeText} />
+      <IntroArticle text={minimalismRulesOne} />
+      <IntroArticle text={minimalismRulesTwo} xlSize />
+      <IntroArticle text={importantThings} />
     </StyledIntroSection>
   );
 };

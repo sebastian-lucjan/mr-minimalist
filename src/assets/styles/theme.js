@@ -7,10 +7,10 @@ export const theme = {
     black: '#121212',
   },
   fontSize: {
-    s: '11px',
-    m: '12px',
-    l: '17px',
-    xl: '24px',
+    s: '12px',
+    m: '16px',
+    l: '20px',
+    xl: '36px',
     logo: '26px',
   },
 };

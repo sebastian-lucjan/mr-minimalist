@@ -11,15 +11,12 @@ export const introTextsObj = {
   purposeIntroText: 'The purpose of my work',
   purposeText:
     'Clean and aesthetic design immediately inspires confidence in people and users become more loyal to the brand on first visiting.',
-  minimalismRules: [
+  minimalismRulesOne:
     'In minimalism functionality always comes first. Every detail works for the final result.',
+  minimalismRulesTwo:
     "All unnecessary is removed. All that remains is the focus on what's important to your brand.",
-    'All designs have different goals and tasks. Every business or project needs a website to solve their own unique challenges.',
-  ],
-  importantThings: [
+  importantThings:
     'The most important thing for me in my work is to understand the client’s tasks, and offer the most relevant solution.',
-    'Minimalism and aesthetics are my tools which I do best with.',
-  ],
 };
 
 export const webConstantTexts = {

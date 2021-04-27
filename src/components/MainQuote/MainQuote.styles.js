@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  max-width: 1280px;
 `;
 
 export const StyledMainQuote = styled.div`
@@ -12,7 +13,8 @@ export const StyledMainQuote = styled.div`
   position: absolute;
   left: 20px;
   bottom: 20px;
-  width: 45%;
+  width: 50%;
+  text-align: left;
   h1,
   h2 {
     display: block;
