@@ -1,32 +1,30 @@
-import { Header } from 'components/Header/Header';
-import MainQuote from 'components/MainQuote/MainQuote';
-import { UsageInfo } from 'components/UsageInfo/UsageInfo';
-import { introTextsObj, webConstantTexts } from 'data/appTextData';
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { theme } from '../../src/assets/styles/theme';
-import { GlobalStyle } from '../assets/styles/GlobalStyle';
-import { IntroSection } from 'components/IntroSection/IntroSection';
-import { Wrapper } from 'views/Root.styles';
+import styled from 'styled-components';
 
-const App = () => {
-  const { mainQuote } = introTextsObj;
-  const { logoText, navigationButtons, usageInfo } = webConstantTexts;
+const StyledIntroSection = styled.section`
+  color: greenyellow;
+`;
 
+export const IntroSection = ({ introTextsObj }) => {
+  // const articles = [];
+  const {
+    intro,
+    textUnderIntro,
+    purposeIntroText,
+    purposeText,
+    minimalismRules,
+    importantThings,
+  } = introTextsObj;
+
+  console.log(intro);
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Wrapper>
-        <Header logoText={logoText} navigationButtons={navigationButtons} />
-        <MainQuote mainQuote={mainQuote} />
-        <UsageInfo usageInfo={usageInfo} />
-        <IntroSection introTextsObj={introTextsObj} />
-      </Wrapper>
-    </ThemeProvider>
+    <StyledIntroSection>
+      <div>{intro}</div>
+    </StyledIntroSection>
   );
 };
 
-export default App;
+IntroSection.propTypes = {};
 // export const introTextsObj= {
 //   intro:
 //     "My name is Sebastian. I'm based in Lublin, Poland, but I work with the whole world.",
