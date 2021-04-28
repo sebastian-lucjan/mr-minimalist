@@ -1,18 +1,15 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  /* display: block; */
-  width: 100%;
-  height: 100%;
-`;
-
 export const StyledMainQuote = styled.div`
-  display: block;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  width: 50%;
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 40%;
   text-align: left;
+  & div {
+    margin: 20px;
+  }
 
   h1,
   h2 {
@@ -32,5 +29,6 @@ export const StyledMainQuote = styled.div`
     font-size: ${({ theme }) => theme.fontSize.m};
     color: ${({ theme }) => theme.colors.gray};
     text-align: right;
+    margin-bottom: 20px;
   }
 `;

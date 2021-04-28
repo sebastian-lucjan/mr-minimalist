@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledIntroSection = styled.section`
-  margin: 80px 20px 0px;
+  padding: 80px 20px 0px;
   display: grid;
   row-gap: 40px;
+  /* display: block; */
+  /* height: 2000px; */
+  grid-area: intro;
   /* height: 100%; */
   /* max-width: 1280px; */
 

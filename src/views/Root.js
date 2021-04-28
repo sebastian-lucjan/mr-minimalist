@@ -25,7 +25,7 @@ const App = () => {
 
           <MainView>
             <MainQuote mainQuote={mainQuote} />
-            {/* <UsageInfo usageInfo={usageInfo} /> */}
+            <UsageInfo usageInfo={usageInfo} />
             <IntroSection introTextsObj={introTextsObj} />
           </MainView>
 
