@@ -8,6 +8,7 @@ import { theme } from '../../src/assets/styles/theme';
 import { GlobalStyle } from '../assets/styles/GlobalStyle';
 import { IntroSection } from 'components/IntroSection/IntroSection';
 import { Wrapper } from 'views/Root.styles';
+import { Footer } from 'components/Footer/Footer';
 
 const App = () => {
   const { mainQuote } = introTextsObj;
@@ -21,6 +22,7 @@ const App = () => {
         <MainQuote mainQuote={mainQuote} />
         <UsageInfo usageInfo={usageInfo} />
         <IntroSection introTextsObj={introTextsObj} />
+        <Footer />
       </Wrapper>
     </ThemeProvider>
   );

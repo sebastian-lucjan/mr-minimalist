@@ -1,13 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-const StyledUsageInfo = styled.aside`
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: rotate(270deg);
-`;
+import { StyledUsageInfo } from 'components/UsageInfo/UsageInfo.styles';
 
 export const UsageInfo = ({ usageInfo }) => {
   return (

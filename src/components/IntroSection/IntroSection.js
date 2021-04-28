@@ -15,7 +15,6 @@ export const IntroSection = ({ introTextsObj }) => {
     importantThings,
   } = introTextsObj;
 
-  console.log(intro);
   return (
     <StyledIntroSection>
       <IntroArticle text={intro} xlSize />

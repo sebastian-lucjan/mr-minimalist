@@ -4,7 +4,6 @@ import React from 'react';
 
 export const IntroArticle = ({ text, xlSize = false }) => {
   const articleClass = xlSize ? 'articleXlSize' : 'articleMSize';
-  console.log(articleClass);
 
   return (
     <StyledIntroArticle className={articleClass}>{text}</StyledIntroArticle>

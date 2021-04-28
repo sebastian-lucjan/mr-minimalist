@@ -15,17 +15,23 @@ export const StyledMainQuote = styled.div`
   bottom: 20px;
   width: 50%;
   text-align: left;
+
   h1,
   h2 {
     display: block;
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.6rem;
     font-weight: 300;
-    color: ${({ theme }) => theme.colors.gray};
   }
+
+  h1 {
+    font-size: ${({ theme }) => theme.fontSize.l};
+    color: ${({ theme }) => theme.colors.white};
+    /* font-size: 1.6rem; */
+  }
+
   h2 {
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.fontSize.m};
     color: ${({ theme }) => theme.colors.gray};
     text-align: right;
   }
