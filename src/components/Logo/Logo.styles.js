@@ -6,4 +6,7 @@ export const StyledLogo = styled.h1`
   margin-left: 30px;
   text-align: left;
   font-family: 'Work sans';
+
+  cursor: default;
+  user-select: none;
 `;

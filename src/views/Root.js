@@ -1,35 +1,56 @@
+import { Footer } from 'components/Footer/Footer';
 import { Header } from 'components/Header/Header';
+import { IntroSection } from 'components/IntroSection/IntroSection';
 import MainQuote from 'components/MainQuote/MainQuote';
 import { UsageInfo } from 'components/UsageInfo/UsageInfo';
 import { introTextsObj, webConstantTexts } from 'data/appTextData';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Wrapper } from 'views/Root.styles';
 import { theme } from '../../src/assets/styles/theme';
 import { GlobalStyle } from '../assets/styles/GlobalStyle';
-import { IntroSection } from 'components/IntroSection/IntroSection';
-import { Wrapper } from 'views/Root.styles';
-import { Footer } from 'components/Footer/Footer';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { MainView } from 'components/MainView/MainView';
 
 const App = () => {
   const { mainQuote } = introTextsObj;
   const { logoText, navigationButtons, usageInfo } = webConstantTexts;
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Wrapper>
-        <Header logoText={logoText} navigationButtons={navigationButtons} />
-        <MainQuote mainQuote={mainQuote} />
-        <UsageInfo usageInfo={usageInfo} />
-        <IntroSection introTextsObj={introTextsObj} />
-        <Footer />
-      </Wrapper>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Wrapper>
+          <Header logoText={logoText} navigationButtons={navigationButtons} />
+
+          <MainView>
+            <MainQuote mainQuote={mainQuote} />
+            {/* <UsageInfo usageInfo={usageInfo} /> */}
+            <IntroSection introTextsObj={introTextsObj} />
+          </MainView>
+
+          <Footer />
+        </Wrapper>
+      </ThemeProvider>
+    </Router>
   );
 };
 
 export default App;
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // export const introTextsObj= {
 //   intro:
 //     "My name is Sebastian. I'm based in Lublin, Poland, but I work with the whole world.",

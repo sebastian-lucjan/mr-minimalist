@@ -7,4 +7,7 @@ export const StyledUsageInfo = styled.aside`
   transform: rotate(270deg);
   font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ theme }) => theme.colors.gray};
+
+  cursor: default;
+  user-select: none;
 `;

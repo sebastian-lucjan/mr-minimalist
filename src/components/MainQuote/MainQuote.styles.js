@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  display: block;
+  /* display: block; */
   width: 100%;
   height: 100%;
-  position: relative;
-  max-width: 1280px;
 `;
 
 export const StyledMainQuote = styled.div`
