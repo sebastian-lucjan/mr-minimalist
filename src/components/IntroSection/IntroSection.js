@@ -1,23 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
 import { IntroArticle } from 'components/IntroArticle/IntroArticle';
-
-const StyledIntroSection = styled.section`
-  margin: 80px 20px 0px;
-  display: grid;
-  row-gap: 40px;
-  max-width: 1280px;
-
-  & :nth-child(even) {
-    justify-self: center;
-  }
-  & :nth-child(1) {
-    justify-self: center;
-  }
-  & :nth-child(2) {
-    justify-self: right;
-  }
-`;
+import { StyledIntroSection } from 'components/IntroSection/IntroSection.styles';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export const IntroSection = ({ introTextsObj }) => {
   // const articles = [];
@@ -45,7 +29,9 @@ export const IntroSection = ({ introTextsObj }) => {
   );
 };
 
-IntroSection.propTypes = {};
+IntroSection.propTypes = {
+  introTextsObj: PropTypes.object,
+};
 // export const introTextsObj= {
 //   intro:
 //     "My name is Sebastian. I'm based in Lublin, Poland, but I work with the whole world.",
@@ -76,6 +62,108 @@ IntroSection.propTypes = {};
 // navigationButtons: ['about', 'contact'],
 // usageInfo: 'scroll down',
 // footer: {
+//     "All unnecessary is removed. All that remains is the focus on what's important to your brand.",
+//     'All designs have different goals and tasks. Every business or project needs a website to solve their own unique challenges.',
+//   ],
+//   importantThings: [
+//     'The most important thing for me in my work is to understand the client’s tasks, and offer the most relevant solution.',
+//     'Minimalism and aesthetics are my tools which I do best with.',
+//   ],
+// },
+// };
+
+// export const webConstantTexts = {
+// logoText: 'minimalist',
+// mainQuote: {
+//   quote:
+//     '“There are two ways to be rich: One is by acquiring much, and the other is by desiring little.”',
+//   author: 'Jackie French Koller',
+// },
+// navigationButtons: ['about', 'contact'],
+// usageInfo: 'scroll down',
+// footer: {
+//     "All unnecessary is removed. All that remains is the focus on what's important to your brand.",
+//     'All designs have different goals and tasks. Every business or project needs a website to solve their own unique challenges.',
+//   ],
+//   importantThings: [
+//     'The most important thing for me in my work is to understand the client’s tasks, and offer the most relevant solution.',
+//     'Minimalism and aesthetics are my tools which I do best with.',
+//   ],
+// },
+// };
+
+// export const webConstantTexts = {
+// logoText: 'minimalist',
+// mainQuote: {
+//   quote:
+//     '“There are two ways to be rich: One is by acquiring much, and the other is by desiring little.”',
+//   author: 'Jackie French Koller',
+// },
+// navigationButtons: ['about', 'contact'],
+// usageInfo: 'scroll down',
+// footer: {
+//     "All unnecessary is removed. All that remains is the focus on what's important to your brand.",
+//     'All designs have different goals and tasks. Every business or project needs a website to solve their own unique challenges.',
+//   ],
+//   importantThings: [
+//     'The most important thing for me in my work is to understand the client’s tasks, and offer the most relevant solution.',
+//     'Minimalism and aesthetics are my tools which I do best with.',
+//   ],
+// },
+// };
+
+// export const webConstantTexts = {
+// logoText: 'minimalist',
+// mainQuote: {
+//   quote:
+//     '“There are two ways to be rich: One is by acquiring much, and the other is by desiring little.”',
+//   author: 'Jackie French Koller',
+// },
+// navigationButtons: ['about', 'contact'],
+// usageInfo: 'scroll down',
+// footer: {
+//     "All unnecessary is removed. All that remains is the focus on what's important to your brand.",
+//     'All designs have different goals and tasks. Every business or project needs a website to solve their own unique challenges.',
+//   ],
+//   importantThings: [
+//     'The most important thing for me in my work is to understand the client’s tasks, and offer the most relevant solution.',
+//     'Minimalism and aesthetics are my tools which I do best with.',
+//   ],
+// },
+// };
+
+// export const webConstantTexts = {
+// logoText: 'minimalist',
+// mainQuote: {
+//   quote:
+//     '“There are two ways to be rich: One is by acquiring much, and the other is by desiring little.”',
+//   author: 'Jackie French Koller',
+// },
+// navigationButtons: ['about', 'contact'],
+// usageInfo: 'scroll down',
+// footer: {
+//     "All unnecessary is removed. All that remains is the focus on what's important to your brand.",
+//     'All designs have different goals and tasks. Every business or project needs a website to solve their own unique challenges.',
+//   ],
+//   importantThings: [
+//     'The most important thing for me in my work is to understand the client’s tasks, and offer the most relevant solution.',
+//     'Minimalism and aesthetics are my tools which I do best with.',
+//   ],
+// },
+// };
+
+// export const webConstantTexts = {
+// logoText: 'minimalist',
+// mainQuote: {
+//   quote:
+//     '“There are two ways to be rich: One is by acquiring much, and the other is by desiring little.”',
+//   author: 'Jackie French Koller',
+// },
+// navigationButtons: ['about', 'contact'],
+// usageInfo: 'scroll down',
+// footer: {
+//   socialMedia: ['behance', 'facebook', 'instagram'],
+//   socialMedia: ['behance', 'facebook', 'instagram'],
 //   socialMedia: ['behance', 'facebook', 'instagram'],
 //   footerNav: ['main', 'about', 'contact'],
 // },

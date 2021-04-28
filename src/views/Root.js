@@ -27,6 +27,7 @@ const App = () => {
 };
 
 export default App;
+
 // export const introTextsObj= {
 //   intro:
 //     "My name is Sebastian. I'm based in Lublin, Poland, but I work with the whole world.",
