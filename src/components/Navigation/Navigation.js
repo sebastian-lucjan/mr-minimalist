@@ -10,7 +10,7 @@ const Wrapper = styled.nav`
 
 const Navigation = ({ navigationButtons }) => {
   const navButtons = navigationButtons.map((navButon, index) => (
-    <Button key={index} title={navButon} />
+    <Button key={index} title={navButon.name} path={navButon.path} />
   ));
 
   return <Wrapper>{navButtons}</Wrapper>;

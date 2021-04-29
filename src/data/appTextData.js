@@ -21,7 +21,10 @@ export const introTextsObj = {
 
 export const webConstantTexts = {
   logoText: 'minimalist',
-  navigationButtons: ['about', 'contact'],
+  navigationButtons: [
+    { name: 'about', path: '/about' },
+    { name: 'contact', path: '/contact' },
+  ],
   usageInfo: 'scroll down',
   footer: {
     socialMedia: ['behance', 'facebook', 'instagram'],
