@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  min-height: 100vh;
+export const StyledMainView = styled.main`
   display: flex;
   flex-wrap: wrap;
 `;
