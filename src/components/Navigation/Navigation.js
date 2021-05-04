@@ -1,21 +1,16 @@
-import PropTypes from 'prop-types';
 import Button from 'components/NavButton/NavButton';
-import React from 'react';
-import styled from 'styled-components';
+import { StyledNavigation } from 'components/Navigation/Navigation.styles';
+import React, { useContext } from 'react';
+import { DataContext } from 'providers/MinimalistProvider/MinimalistProvider';
 
-const Wrapper = styled.nav`
-  display: flex;
-  margin-right: 20px;
-`;
+const Navigation = () => {
+  const { navigationButtons } = useContext(DataContext);
 
-const Navigation = ({ navigationButtons }) => {
   const navButtons = navigationButtons.map((navButon, index) => (
     <Button key={index} title={navButon.name} path={navButon.path} />
   ));
 
-  return <Wrapper>{navButtons}</Wrapper>;
+  return <StyledNavigation>{navButtons}</StyledNavigation>;
 };
-
-Navigation.propTypes = { navigationButtons: PropTypes.array.isRequired };
 
 export default Navigation;

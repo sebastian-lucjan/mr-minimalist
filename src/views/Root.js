@@ -6,54 +6,47 @@ import { IntroSection } from 'components/IntroSection/IntroSection';
 import MainQuote from 'components/MainQuote/MainQuote';
 import { MainView } from 'components/MainView/MainView';
 import { UsageInfo } from 'components/UsageInfo/UsageInfo';
-import { introTextsObj, webConstantTexts } from 'data/appTextData';
-import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Wrapper } from 'views/Root.styles';
 import { theme } from '../../src/assets/styles/theme';
 import { GlobalStyle } from '../assets/styles/GlobalStyle';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink,
-} from 'react-router-dom';
+import React from 'react';
+import { MinimalistProvider } from 'providers/MinimalistProvider/MinimalistProvider';
 
 const App = () => {
-  const { mainQuote } = introTextsObj;
-  const { logoText, navigationButtons, usageInfo } = webConstantTexts;
-
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Wrapper>
-          <Header logoText={logoText} navigationButtons={navigationButtons} />
-          <Switch>
-            <Route path="/" exact>
-              <MainView>
-                <MainQuote mainQuote={mainQuote} />
-                <UsageInfo usageInfo={usageInfo} />
-                <IntroSection introTextsObj={introTextsObj} />
-              </MainView>
-            </Route>
+        <MinimalistProvider>
+          <Wrapper>
+            <Header />
+            <Switch>
+              <Route path="/" exact>
+                <MainView>
+                  <MainQuote />
+                  <UsageInfo />
+                  <IntroSection />
+                </MainView>
+              </Route>
 
-            <Route path="/about">
-              <AboutView />
-            </Route>
-            <Route path="/contact">
-              <ContactView />
-            </Route>
-          </Switch>
-          <Footer />
-        </Wrapper>
+              <Route path="/about">
+                <AboutView />
+              </Route>
+              <Route path="/contact">
+                <ContactView />
+              </Route>
+            </Switch>
+            <Footer />
+          </Wrapper>
+        </MinimalistProvider>
       </ThemeProvider>
     </Router>
   );
 };
 
 export default App;
-
 //
 //
 //

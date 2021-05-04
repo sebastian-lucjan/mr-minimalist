@@ -1,15 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { NavSocialMedia } from 'components/NavSocialMedia/NavSocialMedia';
-import styled from 'styled-components';
-
-const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  width: 100%;
-  grid-area: footer;
-`;
+import { StyledFooter } from 'components/Footer/Footer.styles';
 
 export const Footer = (props) => {
   return (
@@ -18,5 +9,3 @@ export const Footer = (props) => {
     </StyledFooter>
   );
 };
-
-Footer.propTypes = {};

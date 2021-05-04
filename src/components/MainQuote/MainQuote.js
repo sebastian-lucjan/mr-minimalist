@@ -1,8 +1,11 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { StyledMainQuote, Wrapper } from './MainQuote.styles';
+import React, { useContext } from 'react';
+import { DataContext } from 'providers/MinimalistProvider/MinimalistProvider';
+import { StyledMainQuote } from './MainQuote.styles';
 
-const MainQuote = ({ mainQuote: { author, quote } }) => {
+const MainQuote = () => {
+  const { mainQuote } = useContext(DataContext);
+  const { author, quote } = mainQuote;
+
   return (
     <StyledMainQuote>
       <div>
@@ -12,7 +15,5 @@ const MainQuote = ({ mainQuote: { author, quote } }) => {
     </StyledMainQuote>
   );
 };
-
-MainQuote.propTypes = { mainQuote: PropTypes.object.isRequired };
 
 export default MainQuote;

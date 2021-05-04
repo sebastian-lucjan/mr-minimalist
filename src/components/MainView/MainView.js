@@ -1,13 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import { StyledMainView } from 'components/MainView/MainView.styles';
 
-const StyledMainView = styled.main`
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-export const MainView = (props) => {
-  return <StyledMainView>{props.children}</StyledMainView>;
+export const MainView = ({ children }) => {
+  return <StyledMainView>{children}</StyledMainView>;
 };
-
-MainView.propTypes = {};

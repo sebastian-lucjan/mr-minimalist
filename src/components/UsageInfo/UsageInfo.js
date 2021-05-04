@@ -1,15 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { StyledUsageInfo } from 'components/UsageInfo/UsageInfo.styles';
+import React, { useContext } from 'react';
+import { DataContext } from 'providers/MinimalistProvider/MinimalistProvider';
 
-export const UsageInfo = ({ usageInfo }) => {
+export const UsageInfo = () => {
+  const { usageInfo } = useContext(DataContext);
   return (
     <StyledUsageInfo>
       <div>{usageInfo}</div>
     </StyledUsageInfo>
   );
-};
-
-UsageInfo.propTypes = {
-  usageInfo: PropTypes.string.isRequired,
 };
