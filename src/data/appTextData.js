@@ -32,3 +32,13 @@ export const webConstantTexts = {
     footerNav: ['main', 'about', 'contact'],
   },
 };
+
+export const contactTexts = {
+  mail: 'sebastian.lucjan@gmail.com',
+  phoneNumber: 'tel.: 602 446 335',
+};
+
+export const aboutText = `Software crafted with pride in Poland
+Gartner recently ranked Polish programmers as some of the best in the world for our language skills and cultural fit, as well as the stability of our economy and infrastructure.
+
+My name is Sebastian. I'm based in Lublin, Poland, but I work with the whole world.`;

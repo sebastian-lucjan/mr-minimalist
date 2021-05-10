@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { DataContext } from 'providers/MinimalistProvider/MinimalistProvider';
 import { StyledMainQuote } from './MainQuote.styles';
 
-const MainQuote = () => {
+export const MainQuote = () => {
   const { mainQuote } = useContext(DataContext);
   const { author, quote } = mainQuote;
 
@@ -15,5 +15,3 @@ const MainQuote = () => {
     </StyledMainQuote>
   );
 };
-
-export default MainQuote;

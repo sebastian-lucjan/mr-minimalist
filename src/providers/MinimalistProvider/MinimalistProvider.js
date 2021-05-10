@@ -1,12 +1,20 @@
 import React from 'react';
-import { introTextsObj, webConstantTexts } from 'data/appTextData';
+import {
+  introTextsObj,
+  webConstantTexts,
+  contactTexts,
+  aboutText,
+} from 'data/appTextData';
 
 export const DataContext = React.createContext({
   introTextsObj: {},
   webConstantTexts: {},
+  contactTexts: {},
   logoText: '',
   navigationButtons: [],
   usageInfo: '',
+  mainQuote: '',
+  aboutText: '',
 });
 
 export const MinimalistProvider = ({ children }) => {
@@ -17,10 +25,12 @@ export const MinimalistProvider = ({ children }) => {
       value={{
         introTextsObj,
         webConstantTexts,
+        contactTexts,
         logoText,
         navigationButtons,
         usageInfo,
         mainQuote,
+        aboutText,
       }}
     >
       {children}
