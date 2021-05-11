@@ -1,30 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavSocialMedia } from 'components/NavSocialMedia/NavSocialMedia';
 import { StyledFooter } from 'components/Footer/Footer.styles';
 import { BackArrow } from 'components/BackArrow/BackArrow';
 
 export const Footer = () => {
-  const [pageYOffsetNum, setPageYOffsetNum] = useState(0);
+  const [pageY, setPageY] = useState(0);
 
-  const handleScroll = (e) => {
-    console.log(e);
-    setPageYOffsetNum(window.pageYOffset);
-    console.log(window.pageYOffset);
-    // debugger;
+  const handleBackClick = () => {
+    console.log('handleBackClick');
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   };
 
-  useEffect(() => {
-    console.log('test');
-    document.addEventListener('mousewheel', handleScroll);
-    return document.removeEventListener('scroll', handleScroll);
-  }, [pageYOffsetNum]);
-  // }, [pageYOffset]);
+  const handleScroll = () => setPageY(window.pageYOffset);
+
+  window.onscroll = handleScroll;
 
   return (
     <StyledFooter>
       <NavSocialMedia />
-      {pageYOffsetNum > 100 ? <BackArrow /> : null}
-      {/* <BackArrow /> */}
+      {pageY ? <BackArrow onClick={handleBackClick} /> : null}
     </StyledFooter>
   );
 };
