@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
     background-color: #121212;
     font-weight: 300;
+    overflow-x: hidden;
   }
 
   *,*::after, *::before{

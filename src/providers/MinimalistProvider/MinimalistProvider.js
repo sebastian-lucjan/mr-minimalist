@@ -8,6 +8,7 @@ import {
 
 export const DataContext = React.createContext({
   introTextsObj: {},
+  mainPageTexts: {},
   webConstantTexts: {},
   contactTexts: {},
   logoText: '',
@@ -18,12 +19,13 @@ export const DataContext = React.createContext({
 });
 
 export const MinimalistProvider = ({ children }) => {
-  const { mainQuote } = introTextsObj;
+  const { mainQuote, mainPageTexts } = introTextsObj;
   const { logoText, navigationButtons, usageInfo } = webConstantTexts;
   return (
     <DataContext.Provider
       value={{
         introTextsObj,
+        mainPageTexts,
         webConstantTexts,
         contactTexts,
         logoText,

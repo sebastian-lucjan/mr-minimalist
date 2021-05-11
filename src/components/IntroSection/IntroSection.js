@@ -4,27 +4,22 @@ import React, { useContext } from 'react';
 import { DataContext } from 'providers/MinimalistProvider/MinimalistProvider';
 
 export const IntroSection = () => {
-  const { introTextsObj } = useContext(DataContext);
+  const { mainPageTexts } = useContext(DataContext);
 
-  const {
-    intro,
-    textUnderIntro,
-    purposeIntroText,
-    purposeText,
-    minimalismRulesOne,
-    minimalismRulesTwo,
-    importantThings,
-  } = introTextsObj;
+  const introArticlesTexts = Object.values(mainPageTexts);
+  console.log(introArticlesTexts);
 
-  return (
-    <StyledIntroSection>
-      <IntroArticle text={intro} xlSize />
-      <IntroArticle text={textUnderIntro} />
-      <IntroArticle text={purposeIntroText} xlSize />
-      <IntroArticle text={purposeText} />
-      <IntroArticle text={minimalismRulesOne} />
-      <IntroArticle text={minimalismRulesTwo} xlSize />
-      <IntroArticle text={importantThings} />
-    </StyledIntroSection>
-  );
+  const introArticles = introArticlesTexts.map((text, id) => (
+    <IntroArticle key={id} id={id} text={text} xlSize={!(id % 2)} />
+  ));
+
+  return <StyledIntroSection>{introArticles}</StyledIntroSection>;
 };
+
+// <IntroArticle text={intro} xlSize />
+// <IntroArticle text={textUnderIntro} />
+// <IntroArticle text={purposeIntroText} xlSize />
+// <IntroArticle text={purposeText} />
+// <IntroArticle text={minimalismRulesOne} />
+// <IntroArticle text={minimalismRulesTwo} xlSize />
+// <IntroArticle text={importantThings} />
