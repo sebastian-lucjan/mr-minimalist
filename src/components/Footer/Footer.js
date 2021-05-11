@@ -4,24 +4,27 @@ import { StyledFooter } from 'components/Footer/Footer.styles';
 import { BackArrow } from 'components/BackArrow/BackArrow';
 
 export const Footer = () => {
-  const [pageYOffset, setPageYOffset] = useState(0);
+  const [pageYOffsetNum, setPageYOffsetNum] = useState(0);
 
-  const handleScroll = () => {
-    setPageYOffset(window.pageYOffset);
+  const handleScroll = (e) => {
+    console.log(e);
+    setPageYOffsetNum(window.pageYOffset);
     console.log(window.pageYOffset);
+    // debugger;
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return window.removeEventListener('scroll', handleScroll);
-  }, [pageYOffset]);
-
-  console.log('test');
+    console.log('test');
+    document.addEventListener('mousewheel', handleScroll);
+    return document.removeEventListener('scroll', handleScroll);
+  }, [pageYOffsetNum]);
+  // }, [pageYOffset]);
 
   return (
     <StyledFooter>
       <NavSocialMedia />
-      {pageYOffset > 100 ? <BackArrow /> : null}
+      {pageYOffsetNum > 100 ? <BackArrow /> : null}
+      {/* <BackArrow /> */}
     </StyledFooter>
   );
 };
