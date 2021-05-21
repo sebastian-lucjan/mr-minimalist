@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/mr-minimalist/static/css/main.6638c3bc.chunk.css",
+    "main.js": "/mr-minimalist/static/js/main.f3695a7a.chunk.js",
+    "main.js.map": "/mr-minimalist/static/js/main.f3695a7a.chunk.js.map",
+    "runtime-main.js": "/mr-minimalist/static/js/runtime-main.cf0506b8.js",
+    "runtime-main.js.map": "/mr-minimalist/static/js/runtime-main.cf0506b8.js.map",
+    "static/css/2.ae9e5f60.chunk.css": "/mr-minimalist/static/css/2.ae9e5f60.chunk.css",
+    "static/js/2.462087c5.chunk.js": "/mr-minimalist/static/js/2.462087c5.chunk.js",
+    "static/js/2.462087c5.chunk.js.map": "/mr-minimalist/static/js/2.462087c5.chunk.js.map",
+    "index.html": "/mr-minimalist/index.html",
+    "static/css/2.ae9e5f60.chunk.css.map": "/mr-minimalist/static/css/2.ae9e5f60.chunk.css.map",
+    "static/css/main.6638c3bc.chunk.css.map": "/mr-minimalist/static/css/main.6638c3bc.chunk.css.map",
+    "static/js/2.462087c5.chunk.js.LICENSE.txt": "/mr-minimalist/static/js/2.462087c5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cf0506b8.js",
+    "static/css/2.ae9e5f60.chunk.css",
+    "static/js/2.462087c5.chunk.js",
+    "static/css/main.6638c3bc.chunk.css",
+    "static/js/main.f3695a7a.chunk.js"
+  ]
+}
