@@ -1,5 +1,5 @@
 import { StyledImg } from 'components/NavSocialMedia/NavSocialMedia.styles';
-import { StyledNavSocialMediaLink } from 'components/SocialMediaLink/StyledSocialMediaLink';
+import { StyledNavSocialMediaLink } from 'components/SocialMediaLink/SocialMediaLink.styles';
 import React from 'react';
 
 export const SocialMediaLink = ({ url, index, alt, src }) => {
