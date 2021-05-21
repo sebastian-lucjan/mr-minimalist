@@ -15,11 +15,3 @@ export const IntroSection = () => {
 
   return <StyledIntroSection>{introArticles}</StyledIntroSection>;
 };
-
-// <IntroArticle text={intro} xlSize />
-// <IntroArticle text={textUnderIntro} />
-// <IntroArticle text={purposeIntroText} xlSize />
-// <IntroArticle text={purposeText} />
-// <IntroArticle text={minimalismRulesOne} />
-// <IntroArticle text={minimalismRulesTwo} xlSize />
-// <IntroArticle text={importantThings} />

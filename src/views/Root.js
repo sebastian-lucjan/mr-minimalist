@@ -30,7 +30,6 @@ const App = () => {
                   <IntroSection />
                 </MainView>
               </Route>
-
               <Route path="/about">
                 <AboutView />
               </Route>
