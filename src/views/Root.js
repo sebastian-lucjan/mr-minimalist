@@ -16,7 +16,7 @@ import { GlobalStyle } from '../assets/styles/GlobalStyle';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <MinimalistProvider>
