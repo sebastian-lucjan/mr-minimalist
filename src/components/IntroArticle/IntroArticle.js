@@ -4,8 +4,6 @@ import React from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-console.log(AOS);
-
 AOS.init();
 
 export const IntroArticle = ({ text, id, xlSize = false }) => {

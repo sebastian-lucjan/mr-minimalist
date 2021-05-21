@@ -1,6 +1,6 @@
-import { socialMediaObj } from 'data/socialMediaData';
 import { StyledNavSocialMedia } from 'components/NavSocialMedia/NavSocialMedia.styles';
 import { SocialMediaLink } from 'components/SocialMediaLink/SocialMediaLink';
+import { socialMediaObj } from 'data/socialMediaData';
 import React from 'react';
 
 export const NavSocialMedia = () => {
@@ -14,5 +14,3 @@ export const NavSocialMedia = () => {
     </>
   );
 };
-
-// NavSocialMedia.propTypes = {};

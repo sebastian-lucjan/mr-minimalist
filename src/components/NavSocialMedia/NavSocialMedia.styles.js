@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 export const StyledNavSocialMedia = styled.nav`
   display: flex;
   height: 100%;
@@ -14,3 +16,9 @@ export const StyledImg = styled.img`
     opacity: 1;
   }
 `;
+
+StyledImg.propTypes = {
+  url: PropTypes.string,
+  src: PropTypes.string,
+  alt: PropTypes.string,
+};
