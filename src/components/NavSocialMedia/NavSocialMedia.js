@@ -1,19 +1,18 @@
-import behanceIcon from 'assets/icons/behance-logo.png';
-import fbIcon from 'assets/icons/facebook-circular-logo.png';
-import instaIcon from 'assets/icons/instagram.png';
+import { socialMediaObj } from 'data/socialMediaData';
 import { StyledNavSocialMedia } from 'components/NavSocialMedia/NavSocialMedia.styles';
+import { SocialMediaLink } from 'components/SocialMediaLink/SocialMediaLink';
 import React from 'react';
 
-export const NavSocialMedia = (props) => {
+export const NavSocialMedia = () => {
   return (
     <>
       <StyledNavSocialMedia>
-        <img src={fbIcon} alt="facebook" />
-        <img src={instaIcon} alt="instagram" />
-        <img src={behanceIcon} alt="behance" />
+        {socialMediaObj.map(({ icon, url, alt }, index) => (
+          <SocialMediaLink key={index} src={icon} url={url} alt={alt} />
+        ))}
       </StyledNavSocialMedia>
     </>
   );
 };
 
-NavSocialMedia.propTypes = {};
+// NavSocialMedia.propTypes = {};
